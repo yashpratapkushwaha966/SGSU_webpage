@@ -21,9 +21,6 @@ body {
   color: #111827;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
 
 /* ===========================
    NAVBAR - NEW UI
@@ -639,10 +636,6 @@ body {
   color: #d9dee7;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
 
   /* ===========================
    RESPONSIVE
@@ -843,5 +836,92 @@ body {
   .best-grid,
   .ai-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===========================
+   FINAL MOBILE FIX
+=========================== */
+
+@media (max-width: 768px) {
+  .main-navbar {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 16px 20px;
+    border-radius: 18px;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 105px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #061a35;
+    padding: 20px;
+    border-radius: 22px;
+    border: 1px solid rgba(147, 197, 253, 0.25);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 800;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+  }
+
+  .nav-links li a:hover {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  .hero-section {
+    padding: 150px 5% 60px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .hero-left p {
+    font-size: 17px;
+    line-height: 1.7;
   }
 }
