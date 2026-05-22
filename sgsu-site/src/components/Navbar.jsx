@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
+
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
   return (
     <motion.nav
       className="main-navbar"
@@ -13,29 +19,19 @@ function Navbar() {
         <span>Future Skills & IT</span>
       </div>
 
-      <ul>
-  <li>
-    <a href="#hero">Home</a>
-  </li>
+      <button className="menu-btn" onClick={() => setOpen(!open)}>
+        {open ? "✕" : "☰"}
+      </button>
 
-  <li>
-    <a href="#about">About</a>
-  </li>
+      <ul className={open ? "nav-links active" : "nav-links"}>
+        <li><a onClick={closeMenu} href="#hero">Home</a></li>
+        <li><a onClick={closeMenu} href="#about">About</a></li>
+        <li><a onClick={closeMenu} href="#programmes">Programmes</a></li>
+        <li><a onClick={closeMenu} href="#achievements">Achievements</a></li>
+        <li><a onClick={closeMenu} href="#contact">Contact</a></li>
+      </ul>
 
-  <li>
-    <a href="#programmes">Programmes</a>
-  </li>
-
-  <li>
-    <a href="#achievements">Achievements</a>
-  </li>
-
-  <li>
-    <a href="#contact">Contact</a>
-  </li>
-</ul>
-
-      <button className="nav-btn">Apply Now</button>
+      <a href="#contact" className="nav-btn">Apply Now</a>
     </motion.nav>
   );
 }
