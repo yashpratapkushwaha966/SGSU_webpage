@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const faculty = [
   {
     name: "Dr. Pooja Bijlani",
-    image: "/faculty/pooja.jpg",
+    image: "/faculty/pooja.jpg ",
   },
   {
     name: "Mr. Harish Karma",
@@ -45,7 +45,7 @@ function Faculty() {
             <img
               src={facultyMember.image}
               alt={facultyMember.name}
-              className="faculty-img"
+              className="faculty-img" loading="lazy"
             />
 
             <h3>{facultyMember.name}</h3>

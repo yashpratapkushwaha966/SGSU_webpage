@@ -41,7 +41,7 @@ function BestPractices() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <img src={student.image} alt={student.name} />
+            <img src={student.image} alt={student.name} loading="lazy" />
             <h3>{student.name}</h3>
             <p>Placed Student</p>
           </motion.div>

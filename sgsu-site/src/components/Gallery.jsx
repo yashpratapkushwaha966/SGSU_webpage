@@ -25,7 +25,7 @@ function Gallery() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <img src={img} alt="SGSU Campus" />
+            <img src={img} alt="SGSU Campus" loading="lazy" />
           </motion.div>
         ))}
       </div>
